@@ -17,3 +17,14 @@ total = 7.5
 let isLoading : boolean
 isLoading = true
 isLoading = false
+
+
+//TIPAGEM EXPLICITA
+let myName: string
+myName = "Jonas Rocha"
+
+
+//INFERÊNCIA DE TIPOS
+let message = "oi, tudo bem?" // Aqui o typescript ja assume que a variável é do tipo "string" então não podemos passar valores como number ou boolean apos isso.
+//message = 67 // << isso da erro.
+message = "sim, tudo ótimo!"
