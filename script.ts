@@ -28,3 +28,11 @@ myName = "Jonas Rocha"
 let message = "oi, tudo bem?" // Aqui o typescript ja assume que a variável é do tipo "string" então não podemos passar valores como number ou boolean apos isso.
 //message = 67 // << isso da erro.
 message = "sim, tudo ótimo!"
+
+
+
+let message1 : any
+//Com o tipo any a variável aceita qualquer valor.
+message1 = "Esse é um texto..."
+message1 = 45
+message1 = true
