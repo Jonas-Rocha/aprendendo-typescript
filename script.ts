@@ -36,3 +36,13 @@ let message1 : any
 message1 = "Esse é um texto..."
 message1 = 45
 message1 = true
+
+
+// Tipagem explicita ou Anotação de tipo (Type Annotation)
+let names : string[] = ["Jonas", "Andressa", /*8 <<colocando um número da erro*/]
+let numbers : number[] = [1, 2, 3, 4, 5, /*"Jõao" << colocando uma string da erro*/]
+
+
+
+// Inferência de tipo.
+let products = ["Product x", "Product y", "Product z"] //ele já deduz que é um array de strings[]
