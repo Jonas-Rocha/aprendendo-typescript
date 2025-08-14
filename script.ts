@@ -46,3 +46,24 @@ let numbers : number[] = [1, 2, 3, 4, 5, /*"Jõao" << colocando uma string da er
 
 // Inferência de tipo.
 let products = ["Product x", "Product y", "Product z"] //ele já deduz que é um array de strings[]
+
+
+
+ function sum(x: number, y: number) { // eu posso tipar o retorno da função como "void" também. assim eu não conseguiria retornar nem string nem numero nem boolean também. o mesmo serve se eu passar o retorno como numero, por exemplo.. ele imperidia o retorno de uma string
+  const result = x + y
+  console.log("Resultado = " + result)
+
+  //return result
+  return "7"  // isso quebraria toda a lógica pois o retorno fica tipado como string e se for usar esse retorno depois como numero não vai funcionar.
+ }
+
+ const result = sum(7, 8) // a função e o proprio result aqui << ficado tipo void quando não tem retorno. mas se eu passo o retorno na função eles são preenchidos com a tipagem.
+
+//Funcionaria com arrowFunctions também.
+ const showMessage = (name: string):string => {
+  const message = "Olá" + name
+
+  return message
+ }
+
+ showMessage("Jonas Rocha", 65)
