@@ -137,3 +137,29 @@ function newProduct(product: Product) {
 }
 
 newProduct({id: 1, name: "Produto X"})
+
+
+
+// Como estender interfaces 
+
+interface Person {
+    id: number,
+    name: string,
+    //email: string,
+}
+
+interface Teacher extends Person {
+  //id: number,
+  //name: string,
+  subjects: string[]
+}
+
+interface Student extends Person {
+  // id: number,
+  // name: string,
+  age: number
+}
+
+let teacher: Teacher = { id: 1, name: "Jonas", subjects: ["JavaScript", "TypeScript"]}
+
+let student: Student = { id: 2, name: "Jõao", age: 23}
