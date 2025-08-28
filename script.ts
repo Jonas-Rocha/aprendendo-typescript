@@ -93,3 +93,24 @@ function singIn(/*data :*/ {email, password} : {email:string, password:string}) 
 }
 
 singIn({email: "jonas@email.com", password: "123"})
+
+
+
+
+
+//Null e Undefined
+
+//Undefined
+let value:number
+console.log(value)
+
+//Null
+let email = null
+console.log(email)
+
+if(!email){
+  console.log("Informe o email!")
+}
+
+
+
