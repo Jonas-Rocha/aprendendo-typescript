@@ -67,3 +67,29 @@ let products = ["Product x", "Product y", "Product z"] //ele já deduz que é um
  }
 
  showMessage("Jonas Rocha", 65)
+
+
+
+
+ // Tipagem em objetos
+
+ // A partir do momento que eu declaro uma propriedade dentro de um objeto ele passa a ser obrigatorio ser preenchido.
+ // Consigo deixar uma propriedade opcional quando eu coloco uma interrogação "?".
+ let user: {name:string, age:number, urlAvatar?:string} = {
+
+  name: "Jonas",
+  age: 27,
+ }
+
+
+//  function singIn(email:string, password:string) {
+//   // Lógica de conectar o usuário na aplicação.
+//  }
+
+//  singIn("jonas@email.com", "123")
+
+function singIn(/*data :*/ {email, password} : {email:string, password:string}) {
+  // Lógica de conectar o usuário 
+}
+
+singIn({email: "jonas@email.com", password: "123"})
