@@ -113,4 +113,14 @@ if(!email){
 }
 
 
+//Union Types
+//Unindo possibilidades de tipos para uma variável.
+let response: string | null | number
+
+response = "Teste"
+response = null
+response = 22
+ 
+
+
 
