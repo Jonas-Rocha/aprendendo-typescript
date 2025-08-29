@@ -210,3 +210,41 @@ let teacher1: Teacher1
 teacher1.id
 let student1: Student1
 student1.id
+
+
+//Generic
+
+/*
+* S => state
+* T => type
+* K => key
+* V => value
+* E => element
+*/
+
+function useState<T extends number | string = string>() {
+  let state: T;
+
+  function get() {
+    return state;
+  }
+
+  function set(newValue: T) {
+    state = newValue;
+  }
+
+  return {get, set}
+}
+
+
+let newState = useState<string>();
+newState.get();
+newState.set("jonas");
+newState.set(123);
+
+
+/*
+Nessa aula, aprenderemos a utilizar generics no TypeScript para tornar a tipagem mais flexível. 
+Os generics permitem definir o tipo em tempo de execução, diferentemente do union, que oferece opções flexíveis, mas não exige a mesma tipagem. 
+É possível definir um tipo padrão para o generic, caso não seja especificado. A utilização de generics é comum em diversas bibliotecas e tecnologias, como React e Axios, facilitando a flexibilidade e consistência na tipagem.
+*/
