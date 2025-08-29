@@ -290,3 +290,10 @@ interface BookPreview {
 const book1: BookPreview = { title: "Typescript"}
 // Utiliznado o pick eu não precisaria criar uma nova tipagem para criar um novo "Book"
 const book2: Pick<Book, "title" | "pages"> = { title: "Typescript", pages: 150}
+
+
+
+// Omit
+
+// O Omit é para quando eu quero reaproveitar alguma tipagem mas deixar de fora algumas propriedades.
+const book3: Omit<Book, "description" | "pages"> = { title: "Typescript", author: "Jonas" }
