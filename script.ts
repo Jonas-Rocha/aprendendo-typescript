@@ -272,3 +272,21 @@ const newUser: User = { id: 1, name: "Jonas" email: "jonas@email.com" }
 
 // diferente da interrogação "?" que deixa uma proriedade opicional, o Partial deixa todos opcionais.
 const updatedUser: Partial<User> = { name: "João" }
+
+
+
+
+interface Book {
+  title: string,
+  pages: number,
+  author: string,
+  description: string
+}
+
+interface BookPreview {
+  title: string
+}
+
+const book1: BookPreview = { title: "Typescript"}
+// Utiliznado o pick eu não precisaria criar uma nova tipagem para criar um novo "Book"
+const book2: Pick<Book, "title" | "pages"> = { title: "Typescript", pages: 150}
