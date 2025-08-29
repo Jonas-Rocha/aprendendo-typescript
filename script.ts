@@ -248,3 +248,27 @@ Nessa aula, aprenderemos a utilizar generics no TypeScript para tornar a tipagem
 Os generics permitem definir o tipo em tempo de execução, diferentemente do union, que oferece opções flexíveis, mas não exige a mesma tipagem. 
 É possível definir um tipo padrão para o generic, caso não seja especificado. A utilização de generics é comum em diversas bibliotecas e tecnologias, como React e Axios, facilitando a flexibilidade e consistência na tipagem.
 */
+
+
+
+/*
+Utilitários do TypeScript
+O TypeScript oferece diversos utilitários que facilitam o trabalho com tipagem, como manipulação, transformação e reutilização de tipos. Esses recursos aumentam a produtividade ao lidar com tipagem no TypeScript. 
+Vamos explorar esses utilitários para melhorar nossa eficiência no desenvolvimento.
+*/
+
+
+
+//Partial
+
+interface User {
+  id: number,
+  name: string,
+  email: string
+}
+
+const newUser: User = { id: 1, name: "Jonas" email: "jonas@email.com" }
+
+
+// diferente da interrogação "?" que deixa um atributo opicional, o Partial deixa todos opcionais.
+const updatedUser: Partial<User> = { name: "João" }
