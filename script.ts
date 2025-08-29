@@ -297,3 +297,48 @@ const book2: Pick<Book, "title" | "pages"> = { title: "Typescript", pages: 150}
 
 // O Omit é para quando eu quero reaproveitar alguma tipagem mas deixar de fora algumas propriedades.
 const book3: Omit<Book, "description" | "pages"> = { title: "Typescript", author: "Jonas" }
+
+
+
+
+
+
+// Record
+
+/*
+Nesta aula, você vai aprender a utilizar o utilitário Record para mapear tipos de objetos. 
+Pode-se definir chaves como String e valores como números, limitando as opções disponíveis. 
+É possível criar objetos com chaves String e valores numéricos, ou até mesmo com tipos personalizados. 
+O Record ajuda a restringir as chaves e valores dentro de um objeto, garantindo a conformidade com a tipagem definida. 
+Essa ferramenta é útil para definir a estrutura que um objeto deve seguir.
+*/
+
+//Cria um objeto onde todas as chaves são string e os valores são numeros.
+const scores: Record<string, number> = {
+  "Jonas": 10,
+  "João": 15,
+}
+
+
+// Limitar valores.
+type Profile = "admin" | "user" | "guest"
+
+const userNovo: Record<Profile, number> = {
+  "admin": 1,
+  "guest": 2,
+  "user": 3
+  //"default": 4  não existe dentro da tipagem "Profile"
+}
+
+
+// Objetos personalizados.
+interface UserNovo {
+  name: string,
+  email: string
+}
+
+
+const users: Record<number, UserNovo> = {
+  1: { name: "Jonas", email: "jonas@email.com"},
+  2: { name: "João", email: "joao@email.com"}
+}
