@@ -365,3 +365,30 @@ interface ProductNovo {
 const productA: ProductNovo = { id: 1, name: "Produto A" }
 
 const productB: typeof productA = { id: 2, name: "Produto B"}
+
+
+
+// Keyof 
+
+
+/*
+Nesta aula, aprendemos a utilizar o KeyOff para extrair chaves de um objeto e usá-las para tipagem. 
+Criaremos um objeto icons com chaves de nomes de ícones e valores de endereços. 
+Em seguida, criaremos uma tipagem a partir desse objeto usando KeyOff, o que nos permite restringir o uso apenas às chaves disponíveis. 
+Assim, conseguiremos extrair as chaves de uma tipagem usando o KeyOff.
+*/
+
+
+
+const icons = {
+  "home": "./path/home.svg",
+  "add": "./path/add.svg",
+  "remove": "./path/remove.svg"
+}
+
+
+type Icon = typeof icons
+
+//O keyof é só para extrair a chave de um objeto, é muito utilizado para consumir biblioteca de icones, por exemplo.
+const icon: keyof Icon = "add"
+
