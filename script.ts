@@ -270,5 +270,5 @@ interface User {
 const newUser: User = { id: 1, name: "Jonas" email: "jonas@email.com" }
 
 
-// diferente da interrogação "?" que deixa um atributo opicional, o Partial deixa todos opcionais.
+// diferente da interrogação "?" que deixa uma proriedade opicional, o Partial deixa todos opcionais.
 const updatedUser: Partial<User> = { name: "João" }
