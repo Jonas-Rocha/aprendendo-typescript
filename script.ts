@@ -342,3 +342,26 @@ const users: Record<number, UserNovo> = {
   1: { name: "Jonas", email: "jonas@email.com"},
   2: { name: "João", email: "joao@email.com"}
 }
+
+
+
+
+
+
+// Typeof
+
+/*
+Nessa aula, aprenderemos a utilizar o typeof para definir tipagens a partir de outras. 
+O typeof permite extrair a tipagem de um objeto já definido e aplicá-la em outro, facilitando a reutilização de tipagens, especialmente ao lidar com bibliotecas externas ou APIs. 
+Essa técnica é útil para definir tipagens a partir de conteúdos já existentes
+*/
+
+
+interface ProductNovo {
+  id: number,
+  name: string
+}
+
+const productA: ProductNovo = { id: 1, name: "Produto A" }
+
+const productB: typeof productA = { id: 2, name: "Produto B"}
